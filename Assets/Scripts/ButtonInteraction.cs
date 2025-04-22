@@ -5,16 +5,16 @@ using UnityEngine.UI;
 public class ButtonInteraction : MonoBehaviour
 {
     [Header("Scene Settings")]
-    public string sceneToLoad = "MainGameScene"; // Имя сцены для загрузки
+    public string sceneToLoad = ""; /// Имя сцены для загрузки
     
     private Button startButton;
     
     void Start()
     {
-        // Находим компонент Button на этом GameObject
+        /// Находим компонент Button на этом GameObject
         startButton = GetComponent<Button>();
         
-        // Добавляем обработчик события нажатия кнопки
+        /// Добавляем обработчик события нажатия кнопки
         if (startButton != null)
         {
             startButton.onClick.AddListener(LoadTargetScene);
@@ -27,10 +27,10 @@ public class ButtonInteraction : MonoBehaviour
     
     void LoadTargetScene()
     {
-        // Проверяем, является ли выбранная сцена сценой выхода
+        /// Проверяем, является ли выбранная сцена сценой выхода
         if (sceneToLoad.Equals("ExitScene", System.StringComparison.OrdinalIgnoreCase))
         {
-            // Выход из приложения
+            /// Выход из приложения
             #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
             #else
@@ -39,14 +39,14 @@ public class ButtonInteraction : MonoBehaviour
         }
         else
         {
-            // Загружаем указанную сцену
+            /// Загружаем указанную сцену
             SceneManager.LoadScene(sceneToLoad);
         }
     }
     
     void OnDestroy()
     {
-        // Важно удалять слушатели при уничтожении объекта
+        /// Важно удалять слушатели при уничтожении объекта
         if (startButton != null)
         {
             startButton.onClick.RemoveListener(LoadTargetScene);
