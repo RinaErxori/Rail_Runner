@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 9e9c9170ba0984e53b2e5735fe408202
+guid: afb4d2a7ada5746c9b93f892caa712c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2849121536291094881
-    second: photo_2024-06-26 20.53.34_0
+      213: -2615874204119335
+    second: blue_0
+  - first:
+      213: 717144221660794061
+    second: blue_1
+  - first:
+      213: -3167441482169377092
+    second: blue_2
+  - first:
+      213: 8592466800823992071
+    second: blue_3
+  - first:
+      213: -3949692458917061792
+    second: blue_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +36,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -97,7 +109,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +122,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: photo_2024-06-26 20.53.34_0
+      name: blue_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1280
-        height: 958
+        y: 587
+        width: 416
+        height: 447
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9e347bde03e578d0800000000000000
-      internalID: -2849121536291094881
+      spriteID: 9de494350e4b6fff0800000000000000
+      internalID: -2615874204119335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_1
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 636
+        width: 72
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dccc0d8bedec3f900800000000000000
+      internalID: 717144221660794061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 634
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe1578f0ccfa04d0800000000000000
+      internalID: -3167441482169377092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_3
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 632
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f737fc7039e3770800000000000000
+      internalID: 8592466800823992071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_4
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 632
+        width: 397
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b953e82afdf29c0800000000000000
+      internalID: -3949692458917061792
       vertices: []
       indices: 
       edges: []
@@ -160,8 +260,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      photo_2024-06-26 20.53.34_0: -2849121536291094881
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

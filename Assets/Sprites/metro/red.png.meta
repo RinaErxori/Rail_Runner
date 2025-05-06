@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9e9c9170ba0984e53b2e5735fe408202
+guid: b3d50d54472fb47fa8d8c432080ed88a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2849121536291094881
-    second: photo_2024-06-26 20.53.34_0
+      213: 8166710274925509176
+    second: red_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: photo_2024-06-26 20.53.34_0
+      name: red_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1280
-        height: 958
+        x: 200
+        y: 164
+        width: 561
+        height: 885
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9e347bde03e578d0800000000000000
-      internalID: -2849121536291094881
+      spriteID: 83ab778d9bbf55170800000000000000
+      internalID: 8166710274925509176
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      photo_2024-06-26 20.53.34_0: -2849121536291094881
+      red_0: 8166710274925509176
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
