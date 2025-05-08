@@ -7,8 +7,8 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Sprite redSprite;    // Спрайт для красно-оранжевого цвета
     [SerializeField] private Sprite greenSprite;  // Спрайт для зеленовато-бирюзового цвета
     [SerializeField] private Sprite orangeSprite; // Спрайт для оранжево-красного цвета
-    [SerializeField] private Sprite blueSprite;   // Спрайт для светлого голубого цвета
-    [SerializeField] private Sprite purpleSprite; // Спрайт для тёмного пурпурно-розового цвета
+    [SerializeField] private Sprite blueSprite;   // Спрайт для голубого цвета
+    [SerializeField] private Sprite purpleSprite; // Спрайт для фиолетово-розового цвета
 
     private Image uiImage;
     private Texture2D targetTexture;
@@ -18,8 +18,8 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
     private readonly Color redColor = new Color(0.996f, 0.141f, 0.090f);
     private readonly Color greenColor = new Color(0.059f, 0.710f, 0.325f);
     private readonly Color orangeColor = new Color(1.000f, 0.522f, 0.094f);
-    private readonly Color blueColor = new Color(0.647f, 0.914f, 1.000f);
-    private readonly Color purpleColor = new Color(0.655f, 0.294f, 0.573f);
+    private readonly Color blueColor = new Color(0.000f, 0.490f, 0.784f, 1.000f);
+    private readonly Color purpleColor = new Color(0.765f, 0.451f, 0.765f, 1.000f); // Заменён на RGBA(0.765, 0.451, 0.765, 1.000)
     private readonly float colorThreshold = 0.05f; // Порог для сравнения цветов
 
     void Start()
@@ -94,16 +94,16 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
                 else if (IsColorMatch(pixelColor, blueColor))
                 {
                     uiImage.sprite = blueSprite;
-                    Debug.Log("Обнаружен светлый голубой цвет! Спрайт изменён.");
+                    Debug.Log("Обнаружен голубой цвет! Спрайт изменён.");
                 }
                 else if (IsColorMatch(pixelColor, purpleColor))
                 {
                     uiImage.sprite = purpleSprite;
-                    Debug.Log("Обнаружен тёмный пурпурно-розовый цвет! Спрайт изменён.");
+                    Debug.Log("Обнаружен фиолетово-розовый цвет! Спрайт изменён.");
                 }
                 else
                 {
-                    Debug.Log("Цвет не является ни красно-оранжевым, ни зеленовато-бирюзовым, ни оранжево-красным, ни светло-голубым, ни пурпурно-розовым.");
+                    Debug.Log("Цвет не является ни красно-оранжевым, ни зеленовато-бирюзовым, ни оранжево-красным, ни голубым, ни фиолетово-розовым.");
                 }
             }
             else
