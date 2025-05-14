@@ -14,7 +14,6 @@ public class SmartLaneRunner : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     private int _currentLane;
-    private float _xPosition;
     private float _targetZPosition;
     private bool _isSwitchingLanes = false;
     private bool _isGrounded = true;
@@ -26,7 +25,7 @@ public class SmartLaneRunner : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         if (_rb != null)
         {
-            _rb.isKinematic = false; // Изменено на false, чтобы использовать физику
+            _rb.isKinematic = false; // Используем физику
             _rb.useGravity = true;   // Включаем гравитацию
             _rb.freezeRotation = true; // Запрещаем вращение
         }
@@ -44,7 +43,6 @@ public class SmartLaneRunner : MonoBehaviour
         }
 
         _currentLane = lanes.Length / 2;
-        _xPosition = transform.position.x;
         _targetZPosition = lanes[_currentLane].position.z;
     }
 
@@ -90,35 +88,33 @@ public class SmartLaneRunner : MonoBehaviour
     {
         if (_isSwitchingLanes)
         {
-            // Плавное перемещение между дорожками
-            float newZ = Mathf.Lerp(transform.position.z, _targetZPosition,
-                                 laneSwitchSpeed * Time.fixedDeltaTime);
-
-            transform.position = new Vector3(
+            // Используем Rigidbody для перемещения между дорожками
+            Vector3 targetPosition = new Vector3(
                 transform.position.x,
                 transform.position.y,
-                newZ
+                _targetZPosition
             );
+
+            Vector3 newVelocity = new Vector3(
+                _rb.linearVelocity.x,
+                _rb.linearVelocity.y,
+                (targetPosition - transform.position).normalized.z * laneSwitchSpeed
+            );
+
+            _rb.linearVelocity = newVelocity;
 
             if (Mathf.Abs(transform.position.z - _targetZPosition) <= laneSwitchThreshold)
             {
                 _isSwitchingLanes = false;
+                _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _rb.linearVelocity.y, 0);
             }
         }
     }
 
     private void MoveForward()
     {
-        _xPosition += runSpeed * Time.fixedDeltaTime;
-
-        // Плавное перемещение вперед
-        float newX = Mathf.Lerp(transform.position.x, _xPosition, 10f * Time.fixedDeltaTime);
-
-        transform.position = new Vector3(
-            newX,
-            transform.position.y,
-            transform.position.z
-        );
+        // Используем Rigidbody для движения вперед
+        _rb.linearVelocity = new Vector3(runSpeed, _rb.linearVelocity.y, _rb.linearVelocity.z);
     }
 
     private void Jump()
