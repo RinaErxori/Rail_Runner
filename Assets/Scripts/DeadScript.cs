@@ -18,7 +18,7 @@ public class DeadlyObstacle : MonoBehaviour
         Vector3 contactNormal = collision.contacts[0].normal; // Нормаль точки контакта
         float angle = Vector3.Angle(contactNormal, safeDirection);
 
-        if (angle > safeAngle) // Если угол вне безопасной зоны
+        if (angle > safeAngle && angle < 180f) // Если угол вне безопасной зоны
         {
             if (debugLogs) Debug.Log($"Игрок коснулся опасной стороны! Угол: {angle}°");
             KillPlayer(collision.gameObject);
