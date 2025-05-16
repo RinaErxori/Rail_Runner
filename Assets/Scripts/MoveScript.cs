@@ -13,24 +13,39 @@ public class SmartLaneRunner : MonoBehaviour
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Energy Settings")]
+    [SerializeField] private float maxEnergy = 100f;
+    [SerializeField] private float energyDepletionRate = 5f;
+    [SerializeField] private float energyLogThreshold = 10f; // Логировать каждые N единиц энергии
+
     private int _currentLane;
     private float _targetZPosition;
     private bool _isSwitchingLanes = false;
     private bool _isGrounded = true;
     private Rigidbody _rb;
+    private float _currentEnergy;
+    private bool _isOutOfEnergy = false;
+    private Vector3 _initialPosition;
+    private Quaternion _initialRotation;
+    private float _lastLoggedEnergy;
 
     private void Awake()
     {
-        // Настройка компонента Rigidbody
         _rb = GetComponent<Rigidbody>();
         if (_rb != null)
         {
-            _rb.isKinematic = false; // Используем физику
-            _rb.useGravity = true;   // Включаем гравитацию
-            _rb.freezeRotation = true; // Запрещаем вращение
+            _rb.isKinematic = false;
+            _rb.useGravity = true;
+            _rb.freezeRotation = true;
         }
 
+        _initialPosition = transform.position;
+        _initialRotation = transform.rotation;
+
         InitializeLaneSystem();
+        _currentEnergy = maxEnergy;
+        _lastLoggedEnergy = maxEnergy;
+        LogEnergyStatus(); // Логируем начальное состояние энергии
     }
 
     private void InitializeLaneSystem()
@@ -48,13 +63,87 @@ public class SmartLaneRunner : MonoBehaviour
 
     private void Update()
     {
+        if (_isOutOfEnergy) return;
+
         HandleInput();
+        UpdateEnergy();
     }
 
     private void FixedUpdate()
     {
+        if (_isOutOfEnergy) return;
+
         HandleLaneSwitching();
         MoveForward();
+    }
+
+    private void UpdateEnergy()
+    {
+        if (_isOutOfEnergy) return;
+
+        float previousEnergy = _currentEnergy;
+        _currentEnergy -= energyDepletionRate * Time.deltaTime;
+
+        // Логируем изменение энергии если прошло больше energyLogThreshold
+        if (Mathf.Abs(_currentEnergy - _lastLoggedEnergy) >= energyLogThreshold ||
+            (_lastLoggedEnergy > 0 && _currentEnergy <= 0))
+        {
+            LogEnergyStatus();
+            _lastLoggedEnergy = _currentEnergy;
+        }
+
+        if (_currentEnergy <= 0f)
+        {
+            _currentEnergy = 0f;
+            OutOfEnergy();
+        }
+    }
+
+    private void LogEnergyStatus()
+    {
+        float percentage = (_currentEnergy / maxEnergy) * 100f;
+        Debug.Log($"Энергия: {_currentEnergy:F1}/{maxEnergy} ({percentage:F0}%)");
+    }
+
+    private void OutOfEnergy()
+    {
+        _isOutOfEnergy = true;
+        Debug.LogWarning("Энергия кончилась! Уровень перезапустится через 3 секунды");
+
+        _rb.linearVelocity = Vector3.zero;
+        Invoke("RestartLevel", 3f);
+    }
+
+    private void RestartLevel()
+    {
+        transform.position = _initialPosition;
+        transform.rotation = _initialRotation;
+
+        _rb.linearVelocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
+
+        _currentEnergy = maxEnergy;
+        _lastLoggedEnergy = maxEnergy;
+        _isOutOfEnergy = false;
+
+        Debug.Log("Уровень перезапущен. Энергия восстановлена!");
+        InitializeLaneSystem();
+    }
+
+    /// <summary>
+    /// Добавляет указанное количество энергии
+    /// </summary>
+    /// <param name="amount">Количество добавляемой энергии</param>
+    public void AddEnergy(float amount)
+    {
+        float oldEnergy = _currentEnergy;
+        _currentEnergy = Mathf.Clamp(_currentEnergy + amount, 0f, maxEnergy);
+
+        if (Mathf.Abs(_currentEnergy - oldEnergy) > 0.1f) // Логируем только если энергия действительно изменилась
+        {
+            Debug.Log($"Получено энергии: +{amount:F1}. Теперь энергии: {_currentEnergy:F1}/{maxEnergy}");
+            _lastLoggedEnergy = _currentEnergy;
+        }
     }
 
     private void HandleInput()
@@ -88,7 +177,6 @@ public class SmartLaneRunner : MonoBehaviour
     {
         if (_isSwitchingLanes)
         {
-            // Используем Rigidbody для перемещения между дорожками
             Vector3 targetPosition = new Vector3(
                 transform.position.x,
                 transform.position.y,
@@ -113,7 +201,6 @@ public class SmartLaneRunner : MonoBehaviour
 
     private void MoveForward()
     {
-        // Используем Rigidbody для движения вперед
         _rb.linearVelocity = new Vector3(runSpeed, _rb.linearVelocity.y, _rb.linearVelocity.z);
     }
 

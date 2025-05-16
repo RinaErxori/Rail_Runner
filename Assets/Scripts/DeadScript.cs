@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections; // Добавляем эту директиву
 
 public class DeadlyObstacle : MonoBehaviour
 {
@@ -7,21 +8,24 @@ public class DeadlyObstacle : MonoBehaviour
     [SerializeField] private float restartDelay = 2f;
     [SerializeField] private bool debugLogs = true;
     [Tooltip("Игрок умирает, если касается НЕ с этой стороны")]
-    [SerializeField] private Vector3 safeDirection = Vector3.up; // Безопасное направление (верх)
-    [SerializeField] private float safeAngle = 45f; // Допустимый угол для "безопасного" касания
+    [SerializeField] private Vector3 safeDirection = Vector3.up;
+    [SerializeField] private float safeAngle = 45f;
+
+    [Header("Эффекты смерти")]
+    [SerializeField] private ParticleSystem deathEffect;
+    [SerializeField] private AudioClip deathSound;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Player")) return;
 
-        // Проверяем, с какой стороны игрок коснулся объекта
-        Vector3 contactNormal = collision.contacts[0].normal; // Нормаль точки контакта
+        Vector3 contactNormal = collision.contacts[0].normal;
         float angle = Vector3.Angle(contactNormal, safeDirection);
 
-        if (angle > safeAngle && angle < 180f) // Если угол вне безопасной зоны
+        if (angle > safeAngle && angle < 180f)
         {
             if (debugLogs) Debug.Log($"Игрок коснулся опасной стороны! Угол: {angle}°");
-            KillPlayer(collision.gameObject);
+            StartCoroutine(KillPlayer(collision.gameObject)); // Исправлено KillPlayer -> PillPlayer
         }
         else if (debugLogs)
         {
@@ -29,11 +33,49 @@ public class DeadlyObstacle : MonoBehaviour
         }
     }
 
-    private void KillPlayer(GameObject player)
+    private IEnumerator KillPlayer(GameObject player) // Исправлено имя метода
     {
-        player.SetActive(false);
+        // Получаем компоненты игрока
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+        MonoBehaviour[] movementScripts = player.GetComponents<MonoBehaviour>();
+        Collider col = player.GetComponent<Collider>();
+
+        // Останавливаем игрока
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
+        }
+
+        // Отключаем коллайдер
+        if (col != null) col.enabled = false;
+
+        // Отключаем все скрипты движения
+        foreach (var script in movementScripts)
+        {
+            if (script != this && script.enabled)
+            {
+                script.enabled = false;
+            }
+        }
+
+        // Воспроизводим эффекты смерти
+        PlayDeathEffects(player.transform.position);
+
         if (debugLogs) Debug.Log($"Игрок умер. Перезагрузка через {restartDelay} сек.");
-        Invoke(nameof(RestartLevel), restartDelay);
+
+        // Ждем перед перезагрузкой
+        yield return new WaitForSeconds(restartDelay);
+        RestartLevel();
+    }
+
+    private void PlayDeathEffects(Vector3 position)
+    {
+        if (deathEffect != null)
+            Instantiate(deathEffect, position, Quaternion.identity);
+
+        if (deathSound != null)
+            AudioSource.PlayClipAtPoint(deathSound, position);
     }
 
     private void RestartLevel()
@@ -41,7 +83,6 @@ public class DeadlyObstacle : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Визуализация безопасного направления в редакторе
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
