@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: afb4d2a7ada5746c9b93f892caa712c2
+guid: 6cfd1437944e14fd09bcb6f3088d416d
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -2615874204119335
-    second: blue_0
-  - first:
-      213: 717144221660794061
-    second: blue_1
-  - first:
-      213: -3167441482169377092
-    second: blue_2
-  - first:
-      213: 8592466800823992071
-    second: blue_3
-  - first:
-      213: -3949692458917061792
-    second: blue_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -36,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -54,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -138,111 +123,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blue_0
+      name: RED_Background_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 587
-        width: 416
-        height: 447
+        y: 0
+        width: 1350
+        height: 1171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9de494350e4b6fff0800000000000000
-      internalID: -2615874204119335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_1
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 636
-        width: 72
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dccc0d8bedec3f900800000000000000
-      internalID: 717144221660794061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_2
-      rect:
-        serializedVersion: 2
-        x: 430
-        y: 634
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbe1578f0ccfa04d0800000000000000
-      internalID: -3167441482169377092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_3
-      rect:
-        serializedVersion: 2
-        x: 439
-        y: 632
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70f737fc7039e3770800000000000000
-      internalID: 8592466800823992071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: blue_4
-      rect:
-        serializedVersion: 2
-        x: 489
-        y: 632
-        width: 397
-        height: 403
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06b953e82afdf29c0800000000000000
-      internalID: -3949692458917061792
+      spriteID: e858e72c28d2b48f181fe65c20d1b860
+      internalID: -134094621
       vertices: []
       indices: 
       edges: []
@@ -251,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c5c4722692e3e441a818bfa6b819bd3a
     internalID: 0
     vertices: []
     indices: 
@@ -261,11 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blue_0: -2615874204119335
-      blue_1: 717144221660794061
-      blue_2: -3167441482169377092
-      blue_3: 8592466800823992071
-      blue_4: -3949692458917061792
+      RED_Background_0: -134094621
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

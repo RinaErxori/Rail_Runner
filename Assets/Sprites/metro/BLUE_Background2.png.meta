@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: b3d50d54472fb47fa8d8c432080ed88a
+guid: 87d0df4f72b0047348c626aa137fead4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 8166710274925509176
-    second: red_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -42,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -126,23 +123,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: red_0
+      name: BLUE_Background2_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 164
-        width: 561
-        height: 885
+        x: 0
+        y: 0
+        width: 1350
+        height: 1171
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 83ab778d9bbf55170800000000000000
-      internalID: 8166710274925509176
+      spriteID: da94c7ce86eff4963ae90c19d85c3933
+      internalID: -1418612293
       vertices: []
       indices: 
       edges: []
@@ -151,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b0a84b6de36ad41098bfc50d34b416cd
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      red_0: 8166710274925509176
+      BLUE_Background2_0: -1418612293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
