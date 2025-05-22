@@ -718,8 +718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textElement: {fileID: 1701846934}
-  message: "\u042D\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u043A\u0438 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439
-    \u0438 \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u0432\u043E\u0441\u043F\u043E\u043B\u043D\u044F\u044E\u0442
+  message: "\u042D\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u043A\u0438 \u0431\u043E\u043B\u044C\u0448\u043E\u0439
+    (\u0432\u0435\u0440\u0445\u043D\u0438\u0439) \u0438 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439
+    (\u043D\u0438\u0436\u043D\u0438\u0439) \u0432\u043E\u0441\u043F\u043E\u043B\u043D\u044F\u044E\u0442
     \u044D\u043D\u0435\u0440\u0433\u0438\u044E"
   showTime: 4
   triggerCollider: {fileID: 741790011}
@@ -808,7 +809,7 @@ Transform:
   m_GameObject: {fileID: 741790009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 90, y: -0, z: 0}
+  m_LocalPosition: {x: 80, y: -0, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2086,6 +2087,10 @@ PrefabInstance:
       propertyPath: strip
       value: 
       objectReference: {fileID: 714866595}
+    - target: {fileID: 2333372995102624327, guid: 0d3ef27061aeb9f428740bec71e9a722, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 938784302716347083, guid: d77ef3a28ea2a3c44b3e89d2410d1947, type: 3}
     - target: {fileID: 4127119977650765014, guid: 0d3ef27061aeb9f428740bec71e9a722, type: 3}
       propertyPath: m_LocalPosition.x
       value: 360
