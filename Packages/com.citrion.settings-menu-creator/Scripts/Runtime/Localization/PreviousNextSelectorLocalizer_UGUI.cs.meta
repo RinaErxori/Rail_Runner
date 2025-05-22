@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f4b273c606af32c4682a3dd18d7a7d9a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/Localization/PreviousNextSelectorLocalizer_UGUI.cs
+  uploadId: 757070

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 518380b1dd2640040bf99488605e0e75
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/Settings/Base/Unity/Setting_Generic_Reflection_Field_Unity.cs
+  uploadId: 757070

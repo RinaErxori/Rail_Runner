@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 50c71312dcec60949bff629c596deb55
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/SettingObject.cs
+  uploadId: 757070

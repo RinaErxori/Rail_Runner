@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc6985f084c02014fad4299fbd7b3448
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/InputElementProviders/InputElementProviders_UGUI_Default_PreviousNextSelectors.preset
+  uploadId: 757070

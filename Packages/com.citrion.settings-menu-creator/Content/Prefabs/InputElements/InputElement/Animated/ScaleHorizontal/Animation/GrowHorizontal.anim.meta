@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c1bb74de20b5dd3499e2f4239549db45
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Animated/ScaleHorizontal/Animation/GrowHorizontal.anim
+  uploadId: 757070

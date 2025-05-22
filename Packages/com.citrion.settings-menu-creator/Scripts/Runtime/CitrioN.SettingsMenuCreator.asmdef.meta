@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 557e282a0a6c69144ac95b2c4c1923df
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/CitrioN.SettingsMenuCreator.asmdef
+  uploadId: 757070

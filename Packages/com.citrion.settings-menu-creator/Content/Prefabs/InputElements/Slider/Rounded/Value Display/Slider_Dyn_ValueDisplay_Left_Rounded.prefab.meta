@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4563f1180da51f444b12e7c0bb4caa85
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Slider/Rounded/Value
+    Display/Slider_Dyn_ValueDisplay_Left_Rounded.prefab
+  uploadId: 757070

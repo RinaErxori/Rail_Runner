@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e915f2d7300e0f748b1eac123c2e0e63
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ScriptableInputElementProvider/UGUI/_Data/Default/PresetData_Provider_UGUI_FromPrefab_Slider_Float.asset
+  uploadId: 757070

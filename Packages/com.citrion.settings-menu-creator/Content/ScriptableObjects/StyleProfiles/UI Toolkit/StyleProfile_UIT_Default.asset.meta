@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1b655b69445c5384686f40590d93326c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/StyleProfiles/UI
+    Toolkit/StyleProfile_UIT_Default.asset
+  uploadId: 757070

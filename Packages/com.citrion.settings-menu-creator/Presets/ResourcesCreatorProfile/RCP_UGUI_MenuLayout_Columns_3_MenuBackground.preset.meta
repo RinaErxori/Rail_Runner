@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7f32cd9528b12d41a5875df0f63d9fb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/RCP_UGUI_MenuLayout_Columns_3_MenuBackground.preset
+  uploadId: 757070

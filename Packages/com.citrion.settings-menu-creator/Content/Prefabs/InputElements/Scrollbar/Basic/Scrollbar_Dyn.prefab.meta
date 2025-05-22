@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: efa2629ddac1b5f4ead95ff629cfbe37
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Scrollbar/Basic/Scrollbar_Dyn.prefab
+  uploadId: 757070

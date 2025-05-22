@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fd20470316054be418630a2280667f54
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/PreviousNextSelector/Basic/PrevNextSelect_Image_Dyn_Anim_SlideIn.prefab
+  uploadId: 757070

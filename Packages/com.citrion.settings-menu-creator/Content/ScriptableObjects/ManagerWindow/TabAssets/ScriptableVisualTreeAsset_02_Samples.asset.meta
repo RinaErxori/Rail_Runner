@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e52129e0109d66348b252aa0ae685745
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/ManagerWindow/TabAssets/ScriptableVisualTreeAsset_02_Samples.asset
+  uploadId: 757070

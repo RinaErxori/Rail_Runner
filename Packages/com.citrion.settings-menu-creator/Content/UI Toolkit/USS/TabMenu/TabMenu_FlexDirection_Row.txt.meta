@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 96f961e269b60ee4784926741d52d874
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/UI Toolkit/USS/TabMenu/TabMenu_FlexDirection_Row.txt
+  uploadId: 757070

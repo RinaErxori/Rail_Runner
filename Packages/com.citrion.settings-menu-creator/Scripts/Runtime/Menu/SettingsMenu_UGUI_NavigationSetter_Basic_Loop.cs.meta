@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5c7ec5306c5a0024ba75f09dcc1ca60b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/Menu/SettingsMenu_UGUI_NavigationSetter_Basic_Loop.cs
+  uploadId: 757070

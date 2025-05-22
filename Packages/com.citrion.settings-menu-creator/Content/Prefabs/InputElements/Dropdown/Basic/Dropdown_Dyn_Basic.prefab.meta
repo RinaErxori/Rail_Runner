@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9a92998b194f9694881177a1c2d67e46
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Dropdown/Basic/Dropdown_Dyn_Basic.prefab
+  uploadId: 757070

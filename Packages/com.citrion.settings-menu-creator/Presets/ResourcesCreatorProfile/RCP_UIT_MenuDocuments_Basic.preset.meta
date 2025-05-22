@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4c483c80de50a040a4582878f3c74d8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/RCP_UIT_MenuDocuments_Basic.preset
+  uploadId: 757070

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c9b206ff738e0604bb607dcd0dc6aeed
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Animation/OnSelected_OnDeselected/GrowShrink_Right/GrowShrinkRight.overrideController
+  uploadId: 757070

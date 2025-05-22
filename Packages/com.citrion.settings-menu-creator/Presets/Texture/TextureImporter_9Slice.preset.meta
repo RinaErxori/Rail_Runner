@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d54d8e6d73bf19e4d847f13c9c1a7ab5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/Texture/TextureImporter_9Slice.preset
+  uploadId: 757070

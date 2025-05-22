@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1b377f6559e57da44aabeb46a732f969
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/Layouts/Columns/MenuLayout_Columns_3.prefab
+  uploadId: 757070

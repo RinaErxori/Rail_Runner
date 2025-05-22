@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1bbbc0100bfff5b41a830eaca6ee7358
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Text/Other/Text_Dyn_ProviderLabel.prefab
+  uploadId: 757070

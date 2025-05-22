@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0e3b803875a61224bab58d0940247ea0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/InputElementProvider/UIToolkit/Class/InputElementProvider_UIT_None.cs
+  uploadId: 757070

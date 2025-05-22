@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cb036c609f90b1e4fb44efd211eca030
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Button/Basic/OnSelected/Animated/Image/_Base/Button_Dyn_Text_Anim_Image_02_Base.prefab
+  uploadId: 757070

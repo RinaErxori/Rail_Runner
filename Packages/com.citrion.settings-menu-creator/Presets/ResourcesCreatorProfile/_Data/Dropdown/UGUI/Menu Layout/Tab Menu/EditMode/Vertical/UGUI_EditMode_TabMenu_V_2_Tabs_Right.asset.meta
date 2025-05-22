@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 40dae9594c5b19b49871ed11954be428
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/_Data/Dropdown/UGUI/Menu
+    Layout/Tab Menu/EditMode/Vertical/UGUI_EditMode_TabMenu_V_2_Tabs_Right.asset
+  uploadId: 757070

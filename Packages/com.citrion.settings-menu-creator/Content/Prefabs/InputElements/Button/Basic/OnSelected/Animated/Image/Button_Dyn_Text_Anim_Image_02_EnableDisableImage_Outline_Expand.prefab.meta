@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4830f93788c4e2a4cade3485a2f79725
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Button/Basic/OnSelected/Animated/Image/Button_Dyn_Text_Anim_Image_02_EnableDisableImage_Outline_Expand.prefab
+  uploadId: 757070

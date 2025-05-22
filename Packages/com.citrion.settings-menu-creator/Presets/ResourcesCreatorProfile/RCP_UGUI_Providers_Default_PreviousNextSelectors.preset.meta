@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c33b4acb99d6b534691ba6a0fb0c700d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/RCP_UGUI_Providers_Default_PreviousNextSelectors.preset
+  uploadId: 757070

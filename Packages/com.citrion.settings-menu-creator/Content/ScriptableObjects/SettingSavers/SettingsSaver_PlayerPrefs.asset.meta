@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b5b61540225d9b4e9ddd3bf24a1c4ab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/SettingSavers/SettingsSaver_PlayerPrefs.asset
+  uploadId: 757070

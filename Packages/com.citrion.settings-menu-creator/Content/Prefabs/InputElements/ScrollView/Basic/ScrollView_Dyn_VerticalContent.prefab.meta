@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a4571f2a1efd563429fd539b492fb0f8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/ScrollView/Basic/ScrollView_Dyn_VerticalContent.prefab
+  uploadId: 757070

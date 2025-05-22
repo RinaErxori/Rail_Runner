@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 20a4d220545e78546a0e9754ba763f9e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Slider/Rounded/Input
+    Field/Slider_Dyn_InputField_Rounded_Corners.prefab
+  uploadId: 757070

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6a63f791efe4d4d4980ab4c92537de3d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/InputElementProvider/UGUI/ScriptableObject/Base/ScriptableInputElementProvider_UGUI_FromPrefab_Generic.cs
+  uploadId: 757070

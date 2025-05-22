@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c23c00f4b8c189e47b2d3a555c3aa18a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/TabMenu/Horizontal/TabMenu_HorizontalTabs_3.prefab
+  uploadId: 757070

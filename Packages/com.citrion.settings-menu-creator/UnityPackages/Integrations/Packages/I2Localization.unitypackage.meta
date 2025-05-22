@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b73b9347de4d3cb4a873ffacbbb5687d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/UnityPackages/Integrations/Packages/I2Localization.unitypackage
+  uploadId: 757070

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 043e132558194814b9bb49d805a3df4e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/InputElementProvider/UIToolkit/Scriptable/Explicit/UXML/ScriptableInputElementProvider_UIT_FromUXML_Slider_Float.cs
+  uploadId: 757070
