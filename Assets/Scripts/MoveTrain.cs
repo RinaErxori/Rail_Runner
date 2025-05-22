@@ -26,7 +26,7 @@ public class TriggerPrefabSpawner : MonoBehaviour
 
         // Создаем префаб на полосе с учетом смещения
         Vector3 spawnPosition = new Vector3(
-            strip.transform.position.x - HowFar,
+            transform.position.x - HowFar,
             strip.transform.position.y + 4f,
             strip.transform.position.z
         );
