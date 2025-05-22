@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bbc517e38f3cf5447bc06ab6ba9d67ba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/RCP_UGUI_MenuLayout_TabMenu_EditMode_HorizontalTabs_3_Top.preset
+  uploadId: 757070

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 19421fb705f5b154e9c278b1c29c1f1c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/ManagerWindow/UI
+    Toolkit/USS/TabMenu_ResourceGenerator.uss
+  uploadId: 757070

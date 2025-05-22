@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9a64ef1730c2cb64fa7c3562a14b4043
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/Settings/Base/Setting_Generic_Reflection_Property_Static.cs
+  uploadId: 757070

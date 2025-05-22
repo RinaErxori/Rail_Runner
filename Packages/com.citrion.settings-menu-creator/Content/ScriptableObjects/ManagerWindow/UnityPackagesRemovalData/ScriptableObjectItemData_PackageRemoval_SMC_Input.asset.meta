@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f00a8a609b3dd0643842de60c051ea76
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/ManagerWindow/UnityPackagesRemovalData/ScriptableObjectItemData_PackageRemoval_SMC_Input.asset
+  uploadId: 757070

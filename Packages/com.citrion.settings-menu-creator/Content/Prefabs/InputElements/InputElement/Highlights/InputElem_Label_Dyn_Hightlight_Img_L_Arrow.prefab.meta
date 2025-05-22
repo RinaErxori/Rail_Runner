@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 094b44df8a970a0409a099b50d82be02
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Highlights/InputElem_Label_Dyn_Hightlight_Img_L_Arrow.prefab
+  uploadId: 757070

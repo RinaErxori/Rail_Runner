@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 851ac95fa5b967e449e8a9e24fec3c44
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.styleprofile/Scripts/Editor/CitrioN.StyleProfileSystem.Editor.asmdef
+  uploadId: 757070

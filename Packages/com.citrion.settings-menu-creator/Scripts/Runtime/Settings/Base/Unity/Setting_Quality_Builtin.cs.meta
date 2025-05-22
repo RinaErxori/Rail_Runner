@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 405397461f90c3f4c8024469a7800c3d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/Settings/Base/Unity/Setting_Quality_Builtin.cs
+  uploadId: 757070

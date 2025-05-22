@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d2bd36197df8a842b6c5fc29b3d4a7c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/SettingsMenu/UGUI/SettingsMenu_UGUI_WorldSpace.prefab
+  uploadId: 757070

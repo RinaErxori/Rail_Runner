@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5ba7871c13ad3bb4696facc5c5869618
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Sprites/Abstract/Credits.txt
+  uploadId: 757070

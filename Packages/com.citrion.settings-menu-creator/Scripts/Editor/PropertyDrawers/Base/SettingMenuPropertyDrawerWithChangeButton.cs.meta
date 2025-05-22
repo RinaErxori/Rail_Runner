@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2ce2c641e944de440aa1949208365af1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Editor/PropertyDrawers/Base/SettingMenuPropertyDrawerWithChangeButton.cs
+  uploadId: 757070

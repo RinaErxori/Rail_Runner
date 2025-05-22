@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 003a4a406c77fdc4dade9061517e15f9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Toggle/Round/Toggle_Dyn_Round_Transparent.prefab
+  uploadId: 757070

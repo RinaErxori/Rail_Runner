@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 925a815d0e4d9b64d96ccae5de36f3df
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/InputElementProvider/UIToolkit/Utility/ProviderUtility_UIT_Slider_Float.cs
+  uploadId: 757070

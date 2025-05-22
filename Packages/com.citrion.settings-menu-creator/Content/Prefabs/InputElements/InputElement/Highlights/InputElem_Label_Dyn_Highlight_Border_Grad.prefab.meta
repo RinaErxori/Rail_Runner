@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4cafa87914d8a8459538ac8fec308fe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Highlights/InputElem_Label_Dyn_Highlight_Border_Grad.prefab
+  uploadId: 757070

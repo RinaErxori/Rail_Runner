@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d74ce4bc4d7ab4c43a3b601117a162d8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/UI Toolkit/USS/Menu/Content/Menu_SettingsParent_ScrollView_Grow.uss
+  uploadId: 757070

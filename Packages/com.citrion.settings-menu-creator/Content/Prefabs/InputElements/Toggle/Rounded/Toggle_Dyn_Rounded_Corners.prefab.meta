@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5981b30ceaba7cc4abaa71d20b9cd031
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Toggle/Rounded/Toggle_Dyn_Rounded_Corners.prefab
+  uploadId: 757070

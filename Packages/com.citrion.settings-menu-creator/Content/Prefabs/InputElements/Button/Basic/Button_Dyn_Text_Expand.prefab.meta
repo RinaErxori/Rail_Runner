@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ee30d84cce1575f44a614a87eba35c4e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Button/Basic/Button_Dyn_Text_Expand.prefab
+  uploadId: 757070

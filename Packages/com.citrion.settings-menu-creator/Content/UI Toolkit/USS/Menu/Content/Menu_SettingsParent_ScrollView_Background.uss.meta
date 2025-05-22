@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e509a93d0f1bb0f4c9c5cad18bb2fcae
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/UI Toolkit/USS/Menu/Content/Menu_SettingsParent_ScrollView_Background.uss
+  uploadId: 757070

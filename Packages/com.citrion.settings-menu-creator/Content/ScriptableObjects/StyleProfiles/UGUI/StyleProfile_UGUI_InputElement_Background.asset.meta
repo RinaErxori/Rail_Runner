@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7687f6cdc69a04e4e9e8d16cf1c22559
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/StyleProfiles/UGUI/StyleProfile_UGUI_InputElement_Background.asset
+  uploadId: 757070

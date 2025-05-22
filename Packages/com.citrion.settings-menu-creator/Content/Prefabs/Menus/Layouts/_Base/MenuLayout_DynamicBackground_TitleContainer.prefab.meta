@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ca04ef9c87f175c4c994cc75a3fd1049
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/Layouts/_Base/MenuLayout_DynamicBackground_TitleContainer.prefab
+  uploadId: 757070

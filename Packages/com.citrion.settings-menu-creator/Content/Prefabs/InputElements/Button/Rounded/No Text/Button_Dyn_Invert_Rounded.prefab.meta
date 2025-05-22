@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 763c573c38f238c48be00a3d0e60f3ee
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Button/Rounded/No
+    Text/Button_Dyn_Invert_Rounded.prefab
+  uploadId: 757070

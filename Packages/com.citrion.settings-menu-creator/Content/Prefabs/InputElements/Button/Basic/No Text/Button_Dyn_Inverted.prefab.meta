@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a1eae98195fcddf46bad190bad9ce0e8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Button/Basic/No
+    Text/Button_Dyn_Inverted.prefab
+  uploadId: 757070

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9574d061a8ce7d54fbc5b2c72f20d8fb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/SettingsCollections/Presets/Other/Preset_SettingsCollection_Other_InputElementsShowcase_Extended.asset
+  uploadId: 757070

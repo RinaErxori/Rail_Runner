@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0a832dbd88ea77347985968a4f1b8195
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ScriptableInputElementProvider/UGUI/_Data/Default/PresetData_Provider_UGUI_FromPrefab_Toggle.asset
+  uploadId: 757070

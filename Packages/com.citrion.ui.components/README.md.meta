@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 343cf0ee0ce58bd4581b8d9036df9d9c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.ui.components/README.md
+  uploadId: 757070

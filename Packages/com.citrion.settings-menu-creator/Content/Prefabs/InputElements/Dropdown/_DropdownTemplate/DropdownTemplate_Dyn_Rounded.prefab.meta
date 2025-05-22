@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 44d30d2f912edf64ab34c37870dea730
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Dropdown/_DropdownTemplate/DropdownTemplate_Dyn_Rounded.prefab
+  uploadId: 757070

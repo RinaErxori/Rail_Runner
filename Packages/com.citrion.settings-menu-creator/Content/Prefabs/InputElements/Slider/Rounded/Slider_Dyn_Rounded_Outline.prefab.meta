@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6c3ddf8c2e6439b4f92336bc8bdf15d0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Slider/Rounded/Slider_Dyn_Rounded_Outline.prefab
+  uploadId: 757070

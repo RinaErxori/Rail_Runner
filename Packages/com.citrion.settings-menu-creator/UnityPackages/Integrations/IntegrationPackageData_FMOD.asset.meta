@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b901f084de7918e4a9ffaac6089917c9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/UnityPackages/Integrations/IntegrationPackageData_FMOD.asset
+  uploadId: 757070

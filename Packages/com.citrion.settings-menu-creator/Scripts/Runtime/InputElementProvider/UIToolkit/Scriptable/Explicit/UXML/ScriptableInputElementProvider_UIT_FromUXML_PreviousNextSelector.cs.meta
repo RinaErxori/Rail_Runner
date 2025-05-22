@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 65f6065970310244c8663b7cdeda26c9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Scripts/Runtime/InputElementProvider/UIToolkit/Scriptable/Explicit/UXML/ScriptableInputElementProvider_UIT_FromUXML_PreviousNextSelector.cs
+  uploadId: 757070

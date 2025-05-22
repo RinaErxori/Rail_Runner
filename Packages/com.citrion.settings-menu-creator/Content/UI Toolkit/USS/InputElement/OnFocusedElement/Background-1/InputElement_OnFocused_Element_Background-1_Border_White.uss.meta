@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 58f36ae119d1ab34b8bb6f5588fae4be
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/UI Toolkit/USS/InputElement/OnFocusedElement/Background-1/InputElement_OnFocused_Element_Background-1_Border_White.uss
+  uploadId: 757070

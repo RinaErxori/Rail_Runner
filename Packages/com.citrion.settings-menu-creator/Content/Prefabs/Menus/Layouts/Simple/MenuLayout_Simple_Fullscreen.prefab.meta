@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1f68f83d0cc3374439459a5bb024541b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/Layouts/Simple/MenuLayout_Simple_Fullscreen.prefab
+  uploadId: 757070

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3d1889397d4383444abb7ef46614c316
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/InputElementProvider/UGUI/Default/Prov_UGUI_Headline.asset
+  uploadId: 757070

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f2262cc74e2d4dd4b915eb383649c84b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Highlights/_Base/InputElement_WithLabel_Dynamic_SelectedHighlight_Vertical.prefab
+  uploadId: 757070

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d35bd15a9bb4d9c4d8c4efcf97619745
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Documentation/Quickstart
+    Guide.pdf
+  uploadId: 757070

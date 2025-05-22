@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: df69af16fe2b69e4fbc767b75f98c436
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/InputElementProvider/UGUI/Rounded
+    Corners/Prov_UGUI_Dropdown_Rounded_Corners.asset
+  uploadId: 757070

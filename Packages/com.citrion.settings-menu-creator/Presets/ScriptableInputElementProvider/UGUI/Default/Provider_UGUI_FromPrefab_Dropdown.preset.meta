@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a208b8c5b1b101049b582467401bf72c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ScriptableInputElementProvider/UGUI/Default/Provider_UGUI_FromPrefab_Dropdown.preset
+  uploadId: 757070

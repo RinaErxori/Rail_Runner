@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4037976af66d5ac46b8fd25a3fb7b3b0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Animation/OnSelected_OnDeselected/Base/OnSelected.anim
+  uploadId: 757070

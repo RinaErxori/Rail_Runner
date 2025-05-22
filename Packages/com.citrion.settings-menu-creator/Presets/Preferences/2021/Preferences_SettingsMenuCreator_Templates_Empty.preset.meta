@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 44ee8f86778a5434fb00decdd2ef70ae
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/Preferences/2021/Preferences_SettingsMenuCreator_Templates_Empty.preset
+  uploadId: 757070

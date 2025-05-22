@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a8043c26028dbbf47ac897034853036b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.ui.components/Content/Prefabs/UI/UGUI/Elements/Slider/InputField/Slider_InputField_L.prefab
+  uploadId: 757070

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa38677a53ecbb04091c129f3f57d7b7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Slider/Basic/Input
+    Field/Slider_Dyn_InputField_Left.prefab
+  uploadId: 757070

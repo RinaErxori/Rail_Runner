@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 705f2a2a5d912e04da8f5f839f0884b5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Other/Highlights/Gradient/Animation/ScaleTo1.overrideController
+  uploadId: 757070

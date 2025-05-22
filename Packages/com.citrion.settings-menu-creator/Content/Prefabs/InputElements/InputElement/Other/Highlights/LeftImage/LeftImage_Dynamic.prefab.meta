@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d256bda8e858b1443bf773d8ca79e801
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Other/Highlights/LeftImage/LeftImage_Dynamic.prefab
+  uploadId: 757070

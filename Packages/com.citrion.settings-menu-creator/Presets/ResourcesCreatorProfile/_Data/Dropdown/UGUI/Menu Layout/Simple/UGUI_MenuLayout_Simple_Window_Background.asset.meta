@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2efef5c704e02654fae5d0990c1e6718
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/_Data/Dropdown/UGUI/Menu
+    Layout/Simple/UGUI_MenuLayout_Simple_Window_Background.asset
+  uploadId: 757070

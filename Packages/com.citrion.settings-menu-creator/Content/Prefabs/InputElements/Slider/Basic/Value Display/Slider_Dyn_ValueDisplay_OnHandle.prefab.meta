@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ffcaa402c8c9229429d8b92101bfb95c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Slider/Basic/Value
+    Display/Slider_Dyn_ValueDisplay_OnHandle.prefab
+  uploadId: 757070

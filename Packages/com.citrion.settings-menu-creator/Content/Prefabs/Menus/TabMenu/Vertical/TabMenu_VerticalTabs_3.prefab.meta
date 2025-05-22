@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6920a2429b3fae04c97a435548a5c0e1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/TabMenu/Vertical/TabMenu_VerticalTabs_3.prefab
+  uploadId: 757070

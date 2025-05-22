@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b6e1cd2d4ae780f4eb1dc7d73a8d120f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/ScriptableObjects/InputElementProvider/UGUI/Rounded/Prov_UGUI_Title_Rounded.asset
+  uploadId: 757070

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 216746cf7de16774f822c82632ed6126
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/InputElement/Animated/ScaleHorizontal/InputElement_WithLabel_Dynamic_SelectedAnimation_ScaleHorizontal.prefab
+  uploadId: 757070

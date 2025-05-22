@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e962e4191373c4046a56dd84a737d88b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/RCP_UIT_MenuDocuments_Basic_TabMenu_2Tabs.preset
+  uploadId: 757070

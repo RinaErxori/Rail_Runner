@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4f5e3f153d0b5a143aad4a9c4c15cb46
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/Menus/Layouts/Simple/MenuLayout_Simple_MenuBackground.prefab
+  uploadId: 757070

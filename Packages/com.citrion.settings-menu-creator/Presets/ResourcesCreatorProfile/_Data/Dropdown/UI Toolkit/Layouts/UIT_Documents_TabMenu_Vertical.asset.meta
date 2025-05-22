@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7254c2740ca1b4c4b8947f2a562ed45f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Presets/ResourcesCreatorProfile/_Data/Dropdown/UI
+    Toolkit/Layouts/UIT_Documents_TabMenu_Vertical.asset
+  uploadId: 757070

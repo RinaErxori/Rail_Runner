@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4cdfcca0b910d1f49a5ffecefe86f7e6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 268863
+  packageName: Settings & Options Menu Creator - Lite
+  packageVersion: 1.5.0
+  assetPath: Packages/com.citrion.settings-menu-creator/Content/Prefabs/InputElements/Button/Basic/OnSelected/Animated/Image/Button_Dyn_Text_Anim_Image_GrowShrinkTop.prefab
+  uploadId: 757070
