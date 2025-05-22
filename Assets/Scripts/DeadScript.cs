@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections; // Добавляем эту директиву
+using System.Collections; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 public class DeadlyObstacle : MonoBehaviour
 {
-    [Header("Настройки смерти")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] private float restartDelay = 2f;
     [SerializeField] private bool debugLogs = true;
-    [Tooltip("Игрок умирает, если касается НЕ с этой стороны")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] private Vector3 safeDirection = Vector3.up;
     [SerializeField] private float safeAngle = 45f;
 
-    [Header("Эффекты смерти")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] private ParticleSystem deathEffect;
     [SerializeField] private AudioClip deathSound;
 
@@ -24,33 +24,33 @@ public class DeadlyObstacle : MonoBehaviour
 
         if (angle > safeAngle && angle < 180f)
         {
-            if (debugLogs) Debug.Log($"Игрок коснулся опасной стороны! Угол: {angle}°");
-            StartCoroutine(KillPlayer(collision.gameObject)); // Исправлено KillPlayer -> PillPlayer
+            if (debugLogs) Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅ: {angle}пїЅ");
+            StartCoroutine(KillPlayer(collision.gameObject)); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ KillPlayer -> PillPlayer
         }
         else if (debugLogs)
         {
-            Debug.Log($"Игрок коснулся безопасной стороны. Угол: {angle}°");
+            Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ: {angle}пїЅ");
         }
     }
 
-    private IEnumerator KillPlayer(GameObject player) // Исправлено имя метода
+    private IEnumerator KillPlayer(GameObject player) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     {
-        // Получаем компоненты игрока
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         Rigidbody rb = player.GetComponent<Rigidbody>();
         MonoBehaviour[] movementScripts = player.GetComponents<MonoBehaviour>();
         Collider col = player.GetComponent<Collider>();
 
-        // Останавливаем игрока
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         if (rb != null)
         {
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             rb.isKinematic = true;
         }
 
-        // Отключаем коллайдер
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (col != null) col.enabled = false;
 
-        // Отключаем все скрипты движения
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         foreach (var script in movementScripts)
         {
             if (script != this && script.enabled)
@@ -59,12 +59,12 @@ public class DeadlyObstacle : MonoBehaviour
             }
         }
 
-        // Воспроизводим эффекты смерти
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         PlayDeathEffects(player.transform.position);
 
-        if (debugLogs) Debug.Log($"Игрок умер. Перезагрузка через {restartDelay} сек.");
+        if (debugLogs) Debug.Log($"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ {restartDelay} пїЅпїЅпїЅ.");
 
-        // Ждем перед перезагрузкой
+        // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         yield return new WaitForSeconds(restartDelay);
         RestartLevel();
     }

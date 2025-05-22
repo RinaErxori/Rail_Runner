@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelFinishTrigger : MonoBehaviour
 {
-    [Header("Настройки")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private float finishDelay = 1f;
     [SerializeField] private string nextSceneName;
 
-    [Header("Эффекты")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] private ParticleSystem winEffect;
     [SerializeField] private AudioClip winSound;
 
@@ -21,33 +21,33 @@ public class LevelFinishTrigger : MonoBehaviour
         if (!isTriggered && other.CompareTag(playerTag))
         {
             isTriggered = true;
-            Debug.Log("Победа! Игрок достиг финиша");
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 
-            // Получаем компоненты игрока
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             playerRigidbody = other.GetComponent<Rigidbody>();
             playerMovementScripts = other.GetComponents<MonoBehaviour>();
 
-            // Останавливаем игрока
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             StopPlayerMovement();
 
-            // Воспроизводим эффекты
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             PlayWinEffects();
 
-            // Завершаем уровень с задержкой
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             Invoke("CompleteLevel", finishDelay);
         }
     }
 
     private void StopPlayerMovement()
     {
-        // Останавливаем физическое движение
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (playerRigidbody != null)
         {
-            playerRigidbody.velocity = Vector3.zero;
+            playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.isKinematic = true;
         }
 
-        // Отключаем все скрипты движения
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         foreach (var script in playerMovementScripts)
         {
             if (script != this && script is not LevelFinishTrigger)
@@ -74,7 +74,7 @@ public class LevelFinishTrigger : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Не указано название следующей сцены!");
+            Debug.LogWarning("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
