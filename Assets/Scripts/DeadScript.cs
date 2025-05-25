@@ -1,17 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections; // ��������� ��� ���������
+using System.Collections; // Необходимо для корутин
 
 public class DeadlyObstacle : MonoBehaviour
 {
-    [Header("��������� ������")]
+    [Header("Настройки столкновения")]
     [SerializeField] private float restartDelay = 2f;
     [SerializeField] private bool debugLogs = true;
-    [Tooltip("����� �������, ���� �������� �� � ���� �������")]
+    [Tooltip("Направление, с которого удар не будет считаться смертельным")]
     [SerializeField] private Vector3 safeDirection = Vector3.up;
-    [SerializeField] private float safeAngle = 45f;
+    [SerializeField]  float safeAngleFrom = 45f;
+    [SerializeField]  float safeAngleTo = 180f;
 
-    [Header("������� ������")]
+    [Header("Эффекты смерти")]
     [SerializeField] private ParticleSystem deathEffect;
     [SerializeField] private AudioClip deathSound;
 
@@ -22,35 +23,35 @@ public class DeadlyObstacle : MonoBehaviour
         Vector3 contactNormal = collision.contacts[0].normal;
         float angle = Vector3.Angle(contactNormal, safeDirection);
 
-        if (angle > safeAngle && angle < 180f)
+        if (angle > safeAngleFrom && angle < safeAngleTo)
         {
-            if (debugLogs) Debug.Log($"����� �������� ������� �������! ����: {angle}�");
-            StartCoroutine(KillPlayer(collision.gameObject)); // ���������� KillPlayer -> PillPlayer
+            if (debugLogs) Debug.Log($"Объект столкнулся под смертельным углом! Угол: {angle}°");
+            StartCoroutine(KillPlayer(collision.gameObject));
         }
         else if (debugLogs)
         {
-            Debug.Log($"����� �������� ���������� �������. ����: {angle}�");
+            Debug.Log($"Объект столкнулся под безопасным углом. Угол: {angle}°");
         }
     }
 
-    private IEnumerator KillPlayer(GameObject player) // ���������� ��� ������
+    private IEnumerator KillPlayer(GameObject player)
     {
-        // �������� ���������� ������
+        // Получаем компоненты игрока
         Rigidbody rb = player.GetComponent<Rigidbody>();
         MonoBehaviour[] movementScripts = player.GetComponents<MonoBehaviour>();
         Collider col = player.GetComponent<Collider>();
 
-        // ������������� ������
+        // Останавливаем физику
         if (rb != null)
         {
-            rb.linearVelocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
             rb.isKinematic = true;
         }
 
-        // ��������� ���������
+        // Отключаем коллайдер
         if (col != null) col.enabled = false;
 
-        // ��������� ��� ������� ��������
+        // Отключаем все скрипты движения
         foreach (var script in movementScripts)
         {
             if (script != this && script.enabled)
@@ -59,12 +60,12 @@ public class DeadlyObstacle : MonoBehaviour
             }
         }
 
-        // ������������� ������� ������
+        // Воспроизводим эффекты смерти
         PlayDeathEffects(player.transform.position);
 
-        if (debugLogs) Debug.Log($"����� ����. ������������ ����� {restartDelay} ���.");
+        if (debugLogs) Debug.Log($"Игрок умер. Перезагрузка через {restartDelay} сек.");
 
-        // ���� ����� �������������
+        // Ждем перед перезагрузкой
         yield return new WaitForSeconds(restartDelay);
         RestartLevel();
     }
