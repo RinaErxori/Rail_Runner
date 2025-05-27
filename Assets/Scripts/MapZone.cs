@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
@@ -12,11 +13,13 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Sprite purpleSprite; // Спрайт для фиолетово-розового цвета
     [SerializeField] private Image secondaryImage; // Вторая Image для перехода
     [SerializeField] private float fadeDuration = 0.5f; // Длительность перехода
+    [SerializeField] private Button startLevelButton; // Кнопка для запуска уровня
 
     private Image uiImage;
     private Texture2D targetTexture;
     private RectTransform rectTransform;
     private bool isFading = false;
+    private Sprite selectedSprite; // Хранит выбранный спрайт для запуска уровня
 
     // Цвета для проверки
     private readonly Color redColor = new Color(0.996f, 0.141f, 0.090f);
@@ -25,6 +28,9 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
     private readonly Color blueColor = new Color(0.000f, 0.490f, 0.784f, 1.000f);
     private readonly Color purpleColor = new Color(0.765f, 0.451f, 0.765f, 1.000f);
     private readonly float colorThreshold = 0.05f; // Порог для сравнения цветов
+
+    // Имена сцен для 5 уровней
+    private readonly string[] levelScenes = { "Level1", "Level2", "Level3", "Level4", "Level5" };
 
     void Start()
     {
@@ -45,6 +51,15 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
             Debug.LogError("Вторичная Image не назначена!");
             enabled = false;
             return;
+        }
+
+        if (startLevelButton == null)
+        {
+            Debug.LogWarning("Кнопка startLevelButton не назначена! Уровень не будет запущен.");
+        }
+        else
+        {
+            startLevelButton.onClick.AddListener(OnStartLevelButtonClicked);
         }
 
         // Инициализируем вторую Image
@@ -102,26 +117,31 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
                 {
                     newSprite = redSprite;
                     colorName = "яркий красно-оранжевый";
+                    selectedSprite = newSprite; // Сохраняем выбранный спрайт
                 }
                 else if (IsColorMatch(pixelColor, greenColor) && greenSprite != null)
                 {
                     newSprite = greenSprite;
                     colorName = "тёмный зеленовато-бирюзовый";
+                    selectedSprite = newSprite;
                 }
                 else if (IsColorMatch(pixelColor, orangeColor) && orangeSprite != null)
                 {
                     newSprite = orangeSprite;
                     colorName = "яркий оранжево-красный";
+                    selectedSprite = newSprite;
                 }
                 else if (IsColorMatch(pixelColor, blueColor) && blueSprite != null)
                 {
                     newSprite = blueSprite;
                     colorName = "голубой";
+                    selectedSprite = newSprite;
                 }
                 else if (IsColorMatch(pixelColor, purpleColor) && purpleSprite != null)
                 {
                     newSprite = purpleSprite;
                     colorName = "фиолетово-розовый";
+                    selectedSprite = newSprite;
                 }
 
                 // Если спрайт найден, запускаем переход
@@ -171,6 +191,33 @@ public class ColorDetectorUI : MonoBehaviour, IPointerClickHandler
         secondaryImage.color = new Color(1f, 1f, 1f, 0f);
 
         isFading = false;
+    }
+
+    private void OnStartLevelButtonClicked()
+    {
+        if (selectedSprite != null)
+        {
+            int levelIndex = -1;
+            if (selectedSprite == redSprite) levelIndex = 0;     // Level1
+            else if (selectedSprite == greenSprite) levelIndex = 1;  // Level2
+            else if (selectedSprite == orangeSprite) levelIndex = 2; // Level3
+            else if (selectedSprite == blueSprite) levelIndex = 3;   // Level4
+            else if (selectedSprite == purpleSprite) levelIndex = 4; // Level5
+
+            if (levelIndex >= 0 && levelIndex < levelScenes.Length)
+            {
+                Debug.Log($"Запуск уровня: {levelScenes[levelIndex]}");
+                SceneManager.LoadScene(levelScenes[levelIndex]);
+            }
+            else
+            {
+                Debug.LogWarning("Не удалось определить уровень для выбранного спрайта!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Сначала выберите цвет, нажав на спрайт!");
+        }
     }
 
     private bool IsColorMatch(Color a, Color b)

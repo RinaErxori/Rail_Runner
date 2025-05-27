@@ -178,6 +178,7 @@ MonoBehaviour:
   purpleSprite: {fileID: 1929890349, guid: 7cb21029625a74e99833040b80689ca1, type: 3}
   secondaryImage: {fileID: 1720922880}
   fadeDuration: 0.65
+  startLevelButton: {fileID: 958234726}
 --- !u!114 &334407064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,9 +617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958234725}
   - component: {fileID: 958234728}
-  - component: {fileID: 958234730}
   - component: {fileID: 958234727}
-  - component: {fileID: 958234729}
   - component: {fileID: 958234726}
   m_Layer: 5
   m_Name: level_button
@@ -729,32 +728,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958234724}
   m_CullTransparentMesh: 1
---- !u!114 &958234729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958234724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adcb707a5fd3c4777b6d41cae0ec0757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: Level
---- !u!114 &958234730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958234724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adcb707a5fd3c4777b6d41cae0ec0757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: Level
 --- !u!1 &1417405717
 GameObject:
   m_ObjectHideFlags: 0

@@ -1911,6 +1911,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 21424149482745810, guid: ce02d38f596a3fc4a8882a6411b340b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1080767904}
     - target: {fileID: 1124640927973085325, guid: ce02d38f596a3fc4a8882a6411b340b9, type: 3}
       propertyPath: m_Name
       value: PlaneSetup5rail
@@ -1955,6 +1959,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996245832040194773, guid: ce02d38f596a3fc4a8882a6411b340b9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1080767904}
     - target: {fileID: 8203134901831084786, guid: ce02d38f596a3fc4a8882a6411b340b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -85
@@ -1964,6 +1972,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce02d38f596a3fc4a8882a6411b340b9, type: 3}
+--- !u!114 &1080767904 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5946841806636373947, guid: ce02d38f596a3fc4a8882a6411b340b9, type: 3}
+  m_PrefabInstance: {fileID: 1080767903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7129215ddf8f5e4d8d8b4195d538718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1146127469
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,16 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections; // Необходимо для корутин
 
 public class DeadlyObstacle : MonoBehaviour
 {
     [Header("Настройки столкновения")]
-    [SerializeField] private float restartDelay = 2f;
     [SerializeField] private bool debugLogs = true;
     [Tooltip("Направление, с которого удар не будет считаться смертельным")]
     [SerializeField] private Vector3 safeDirection = Vector3.up;
-    [SerializeField]  float safeAngleFrom = 45f;
-    [SerializeField]  float safeAngleTo = 180f;
+    [SerializeField] private float safeAngleFrom = 45f;
+    [SerializeField] private float safeAngleTo = 180f;
 
     [Header("Эффекты смерти")]
     [SerializeField] private ParticleSystem deathEffect;
@@ -26,7 +23,7 @@ public class DeadlyObstacle : MonoBehaviour
         if (angle > safeAngleFrom && angle < safeAngleTo)
         {
             if (debugLogs) Debug.Log($"Объект столкнулся под смертельным углом! Угол: {angle}°");
-            StartCoroutine(KillPlayer(collision.gameObject));
+            KillPlayer(collision.gameObject);
         }
         else if (debugLogs)
         {
@@ -34,40 +31,21 @@ public class DeadlyObstacle : MonoBehaviour
         }
     }
 
-    private IEnumerator KillPlayer(GameObject player)
+    private void KillPlayer(GameObject player)
     {
-        // Получаем компоненты игрока
-        Rigidbody rb = player.GetComponent<Rigidbody>();
-        MonoBehaviour[] movementScripts = player.GetComponents<MonoBehaviour>();
-        Collider col = player.GetComponent<Collider>();
-
-        // Останавливаем физику
-        if (rb != null)
+        // Получаем компонент SmartLaneRunner
+        SmartLaneRunner runner = player.GetComponent<SmartLaneRunner>();
+        if (runner != null)
         {
-            rb.velocity = Vector3.zero;
-            rb.isKinematic = true;
+            // Воспроизводим эффекты смерти
+            PlayDeathEffects(player.transform.position);
+            // Вызываем метод смерти в SmartLaneRunner
+            runner.KillPlayer();
         }
-
-        // Отключаем коллайдер
-        if (col != null) col.enabled = false;
-
-        // Отключаем все скрипты движения
-        foreach (var script in movementScripts)
+        else
         {
-            if (script != this && script.enabled)
-            {
-                script.enabled = false;
-            }
+            if (debugLogs) Debug.LogError("SmartLaneRunner не найден на объекте игрока!");
         }
-
-        // Воспроизводим эффекты смерти
-        PlayDeathEffects(player.transform.position);
-
-        if (debugLogs) Debug.Log($"Игрок умер. Перезагрузка через {restartDelay} сек.");
-
-        // Ждем перед перезагрузкой
-        yield return new WaitForSeconds(restartDelay);
-        RestartLevel();
     }
 
     private void PlayDeathEffects(Vector3 position)
@@ -77,11 +55,6 @@ public class DeadlyObstacle : MonoBehaviour
 
         if (deathSound != null)
             AudioSource.PlayClipAtPoint(deathSound, position);
-    }
-
-    private void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnDrawGizmosSelected()

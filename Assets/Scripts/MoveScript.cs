@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+using System.Collections;
 
 public class SmartLaneRunner : MonoBehaviour
 {
@@ -16,7 +18,15 @@ public class SmartLaneRunner : MonoBehaviour
     [Header("Energy Settings")]
     [SerializeField] private float maxEnergy = 100f;
     [SerializeField] private float energyDepletionRate = 5f;
-    [SerializeField] private float energyLogThreshold = 10f; // Логировать каждые N единиц энергии
+    [SerializeField] private float energyLogThreshold = 10f;
+
+    [Header("Obstacle Settings")]
+    [SerializeField] private string obstacleTag = "Obstacle";
+
+    [Header("Animation Settings")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private ParticleSystem deathEffect;
+    [SerializeField] private float effectDuration = 2f;
 
     private int _currentLane;
     private float _targetZPosition;
@@ -29,6 +39,8 @@ public class SmartLaneRunner : MonoBehaviour
     private Quaternion _initialRotation;
     private float _lastLoggedEnergy;
 
+    public event Action OnGameOver;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
@@ -39,13 +51,21 @@ public class SmartLaneRunner : MonoBehaviour
             _rb.freezeRotation = true;
         }
 
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator не найден на объекте игрока!");
+            enabled = false;
+            return;
+        }
+
         _initialPosition = transform.position;
         _initialRotation = transform.rotation;
 
         InitializeLaneSystem();
         _currentEnergy = maxEnergy;
         _lastLoggedEnergy = maxEnergy;
-        LogEnergyStatus(); // Логируем начальное состояние энергии
+        LogEnergyStatus();
     }
 
     private void InitializeLaneSystem()
@@ -59,6 +79,7 @@ public class SmartLaneRunner : MonoBehaviour
 
         _currentLane = lanes.Length / 2;
         _targetZPosition = lanes[_currentLane].position.z;
+        SetAnimationState("Run");
     }
 
     private void Update()
@@ -67,6 +88,7 @@ public class SmartLaneRunner : MonoBehaviour
 
         HandleInput();
         UpdateEnergy();
+        UpdateAnimation();
     }
 
     private void FixedUpdate()
@@ -84,7 +106,6 @@ public class SmartLaneRunner : MonoBehaviour
         float previousEnergy = _currentEnergy;
         _currentEnergy -= energyDepletionRate * Time.deltaTime;
 
-        // Логируем изменение энергии если прошло больше energyLogThreshold
         if (Mathf.Abs(_currentEnergy - _lastLoggedEnergy) >= energyLogThreshold ||
             (_lastLoggedEnergy > 0 && _currentEnergy <= 0))
         {
@@ -108,42 +129,118 @@ public class SmartLaneRunner : MonoBehaviour
     private void OutOfEnergy()
     {
         _isOutOfEnergy = true;
-        Debug.LogWarning("Энергия кончилась! Уровень перезапустится через 3 секунды");
-
-        _rb.linearVelocity = Vector3.zero;
-        Invoke("RestartLevel", 3f);
+        Debug.LogWarning("Энергия кончилась! Игра приостановлена.");
+        TriggerGameOver();
     }
 
-    private void RestartLevel()
+    public void KillPlayer()
+    {
+        if (_isOutOfEnergy) return;
+        _isOutOfEnergy = true;
+        Debug.LogWarning("Игрок столкнулся с препятствием! Игра приостановлена.");
+        TriggerGameOver();
+    }
+
+    private void TriggerGameOver()
+    {
+        _isOutOfEnergy = true;
+        if (_rb != null)
+        {
+            _rb.linearVelocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
+            _rb.isKinematic = true;
+        }
+        SetAnimationState("Fall");
+        PlayDeathEffect();
+        StartCoroutine(ShowGameOverAfterDelay(effectDuration));
+        Time.timeScale = 0f;
+        Debug.Log("TriggerGameOver вызван! Подписчиков на OnGameOver: " + (OnGameOver != null ? OnGameOver.GetInvocationList().Length : 0));
+        OnGameOver?.Invoke();
+    }
+
+    private void UpdateAnimation()
+    {
+        if (_isOutOfEnergy) return;
+
+        Debug.Log($"UpdateAnimation: Grounded={_isGrounded}, VelocityX={_rb.linearVelocity.x}, VelocityY={_rb.linearVelocity.y}");
+
+        if (!_isGrounded)
+        {
+            SetAnimationState("Jump");
+        }
+        else if (_rb.linearVelocity.x > 0.1f) // Проверка движения вперед
+        {
+            SetAnimationState("Run");
+        }
+    }
+
+    private void SetAnimationState(string state)
+    {
+        if (animator != null)
+        {
+            Debug.Log($"Переключение анимации на: {state}");
+            animator.SetBool("isJumping", state == "Jump");
+            animator.SetBool("isFalling", state == "Fall");
+            animator.SetBool("isRunning", state == "Run");
+        }
+        else
+        {
+            Debug.LogError("Animator не назначен!");
+        }
+    }
+
+    private void PlayDeathEffect()
+    {
+        if (deathEffect != null)
+        {
+            ParticleSystem effectInstance = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effectInstance.gameObject, effectDuration);
+        }
+    }
+
+    private IEnumerator ShowGameOverAfterDelay(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+        OnGameOver?.Invoke();
+    }
+
+    public void RestartLevel()
     {
         transform.position = _initialPosition;
         transform.rotation = _initialRotation;
 
         _rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = Vector3.zero;
+        _rb.isKinematic = false;
 
         _currentEnergy = maxEnergy;
         _lastLoggedEnergy = maxEnergy;
         _isOutOfEnergy = false;
 
-        Debug.Log("Уровень перезапущен. Энергия восстановлена!");
-        InitializeLaneSystem();
+        SetAnimationState("Run");
+        Time.timeScale = 1f;
     }
 
-    /// <summary>
-    /// Добавляет указанное количество энергии
-    /// </summary>
-    /// <param name="amount">Количество добавляемой энергии</param>
     public void AddEnergy(float amount)
     {
         float oldEnergy = _currentEnergy;
         _currentEnergy = Mathf.Clamp(_currentEnergy + amount, 0f, maxEnergy);
 
-        if (Mathf.Abs(_currentEnergy - oldEnergy) > 0.1f) // Логируем только если энергия действительно изменилась
+        if (Mathf.Abs(_currentEnergy - oldEnergy) > 0.1f)
         {
             Debug.Log($"Получено энергии: +{amount:F1}. Теперь энергии: {_currentEnergy:F1}/{maxEnergy}");
             _lastLoggedEnergy = _currentEnergy;
         }
+    }
+
+    public float GetCurrentEnergy()
+    {
+        return _currentEnergy;
+    }
+
+    public float GetMaxEnergy()
+    {
+        return maxEnergy;
     }
 
     private void HandleInput()
@@ -215,6 +312,10 @@ public class SmartLaneRunner : MonoBehaviour
         if ((groundLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             _isGrounded = true;
+        }
+        else if (collision.gameObject.CompareTag(obstacleTag))
+        {
+            KillPlayer();
         }
     }
 }
