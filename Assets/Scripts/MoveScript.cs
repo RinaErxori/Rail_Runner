@@ -1,6 +1,6 @@
+
 using UnityEngine;
 using System;
-using System.Collections;
 
 public class SmartLaneRunner : MonoBehaviour
 {
@@ -22,11 +22,6 @@ public class SmartLaneRunner : MonoBehaviour
 
     [Header("Obstacle Settings")]
     [SerializeField] private string obstacleTag = "Obstacle";
-
-    [Header("Animation Settings")]
-    [SerializeField] private Animator animator;
-    [SerializeField] private ParticleSystem deathEffect;
-    [SerializeField] private float effectDuration = 2f;
 
     private int _currentLane;
     private float _targetZPosition;
@@ -51,14 +46,6 @@ public class SmartLaneRunner : MonoBehaviour
             _rb.freezeRotation = true;
         }
 
-        animator = GetComponent<Animator>();
-        if (animator == null)
-        {
-            Debug.LogError("Animator не найден на объекте игрока!");
-            enabled = false;
-            return;
-        }
-
         _initialPosition = transform.position;
         _initialRotation = transform.rotation;
 
@@ -79,7 +66,6 @@ public class SmartLaneRunner : MonoBehaviour
 
         _currentLane = lanes.Length / 2;
         _targetZPosition = lanes[_currentLane].position.z;
-        SetAnimationState("Run");
     }
 
     private void Update()
@@ -88,7 +74,6 @@ public class SmartLaneRunner : MonoBehaviour
 
         HandleInput();
         UpdateEnergy();
-        UpdateAnimation();
     }
 
     private void FixedUpdate()
@@ -150,57 +135,8 @@ public class SmartLaneRunner : MonoBehaviour
             _rb.angularVelocity = Vector3.zero;
             _rb.isKinematic = true;
         }
-        SetAnimationState("Fall");
-        PlayDeathEffect();
-        StartCoroutine(ShowGameOverAfterDelay(effectDuration));
         Time.timeScale = 0f;
         Debug.Log("TriggerGameOver вызван! Подписчиков на OnGameOver: " + (OnGameOver != null ? OnGameOver.GetInvocationList().Length : 0));
-        OnGameOver?.Invoke();
-    }
-
-    private void UpdateAnimation()
-    {
-        if (_isOutOfEnergy) return;
-
-        Debug.Log($"UpdateAnimation: Grounded={_isGrounded}, VelocityX={_rb.linearVelocity.x}, VelocityY={_rb.linearVelocity.y}");
-
-        if (!_isGrounded)
-        {
-            SetAnimationState("Jump");
-        }
-        else if (_rb.linearVelocity.x > 0.1f) // Проверка движения вперед
-        {
-            SetAnimationState("Run");
-        }
-    }
-
-    private void SetAnimationState(string state)
-    {
-        if (animator != null)
-        {
-            Debug.Log($"Переключение анимации на: {state}");
-            animator.SetBool("isJumping", state == "Jump");
-            animator.SetBool("isFalling", state == "Fall");
-            animator.SetBool("isRunning", state == "Run");
-        }
-        else
-        {
-            Debug.LogError("Animator не назначен!");
-        }
-    }
-
-    private void PlayDeathEffect()
-    {
-        if (deathEffect != null)
-        {
-            ParticleSystem effectInstance = Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(effectInstance.gameObject, effectDuration);
-        }
-    }
-
-    private IEnumerator ShowGameOverAfterDelay(float delay)
-    {
-        yield return new WaitForSecondsRealtime(delay);
         OnGameOver?.Invoke();
     }
 
@@ -208,7 +144,6 @@ public class SmartLaneRunner : MonoBehaviour
     {
         transform.position = _initialPosition;
         transform.rotation = _initialRotation;
-
         _rb.linearVelocity = Vector3.zero;
         _rb.angularVelocity = Vector3.zero;
         _rb.isKinematic = false;
@@ -217,7 +152,8 @@ public class SmartLaneRunner : MonoBehaviour
         _lastLoggedEnergy = maxEnergy;
         _isOutOfEnergy = false;
 
-        SetAnimationState("Run");
+        Debug.Log("Уровень перезапущен. Энергия восстановлена!");
+        InitializeLaneSystem();
         Time.timeScale = 1f;
     }
 
@@ -312,10 +248,6 @@ public class SmartLaneRunner : MonoBehaviour
         if ((groundLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             _isGrounded = true;
-        }
-        else if (collision.gameObject.CompareTag(obstacleTag))
-        {
-            KillPlayer();
         }
     }
 }
