@@ -3,13 +3,13 @@ using UnityEngine;
 public class CameraFollowX : MonoBehaviour
 {
     [Header("Target Settings")]
-    [SerializeField] private Transform target; // Ссылка на трансформ игрока
-    [SerializeField] private float followSpeed = 5f; // Скорость следования камеры
+    [SerializeField] private Transform target; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    [SerializeField] private float followSpeed = 5f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
     [Header("Position Settings")]
-    [SerializeField] private float yPosition = 10f; // Фиксированная позиция Y
-    [SerializeField] private float zPosition = -10f; // Фиксированная позиция Z
-    [SerializeField] private float xofset = 10f; // Фиксированная позиция Z
+    [SerializeField] private float yPosition = 10f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Y
+    [SerializeField] private float zPosition = -10f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Z
+    [SerializeField] private float xofset = 10f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Z
 
     private Vector3 _targetPosition;
 
@@ -22,7 +22,7 @@ public class CameraFollowX : MonoBehaviour
             return;
         }
 
-        // Инициализируем начальную позицию камеры
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         _targetPosition = new Vector3(target.position.x+xofset, yPosition, zPosition);
         transform.position = _targetPosition;
     }
@@ -31,14 +31,14 @@ public class CameraFollowX : MonoBehaviour
     {
         if (target == null) return;
 
-        // Обновляем только X-координату, сохраняя Y и Z
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ X-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Y пїЅ Z
         _targetPosition.x = target.position.x+xofset;
 
-        // Плавное перемещение камеры
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         transform.position = Vector3.Lerp(transform.position, _targetPosition, followSpeed * Time.deltaTime);
     }
 
-    // Метод для ручной установки позиции Y и Z (если нужно изменить во время игры)
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Y пїЅ Z (пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ)
     public void SetCameraPosition(float newY, float newZ)
     {
         yPosition = newY;

@@ -75,7 +75,7 @@ public class LevelFinishTrigger : MonoBehaviour
         else
         {
             Debug.LogWarning("�� ������� �������� ��������� �����!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("StartScene");
         }
     }
 }
